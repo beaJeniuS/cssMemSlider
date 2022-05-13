@@ -120,17 +120,6 @@ body {
   display: none;
 }
 
-.sw1 {}
-
-.sw2 {}
-
-.sw3 {}
-
-.sw4 {}
-
-.sw5 {}
-
-
 .slider__navigation {
   display: flex;
   justify-content: space-between;
@@ -143,10 +132,20 @@ body {
   column-gap: 1%;
 }
 
+.slider__buttons {
+  width: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1vh;
+  padding: 1vh 0;
+}
+
 .slider__buttons-item {
-  width: 2%;
-  height: 2%;
-  border: 0.3vh solid #ffffff55;
+  width: 100%;
+  height: 100%;
+  border: 0.2vh solid #ffffff;
+  background-color: #d49202;
   border-radius: 50%;
   transition: all .3s ease;
   cursor: pointer;
@@ -155,34 +154,79 @@ body {
 .slider__notification {
   display: flex;
   flex-direction: column;
-  height: 1.8rem;
+  height: 3rem;
   overflow-y: hidden;
   justify-content: flex-start;
 }
 
-.slider__notification-item {
+.slider__notification-items {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.nti1 {}
+.slider__notification-item {
+  height: 3rem;
+  transition: .7s;
+  padding: 0.5rem 0;
+}
 
-.nti2 {}
+#sw1:checked~.slider__items .sw1 {
+  margin-left: 0;
+}
 
-.nti3 {}
+#sw1:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
+  margin-top: 0;
+}
 
-.nti4 {}
+#sw1:checked~.slider__navigation .slider__buttons .lb1 {
+  background-color: #ffffff;
+}
 
-.nti5 {}
+#sw2:checked~.slider__items .sw1 {
+  margin-left: -20%;
+}
 
-.slider__buttons {}
+#sw2:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
+  margin-top: -3rem;
+}
 
-.slider__navigation-item {}
+#sw2:checked~.slider__navigation .slider__buttons .lb2 {
+  background-color: #ffffff;
+}
 
-.lb1 {}
+#sw3:checked~.slider__items .sw1 {
+  margin-left: -40%;
+}
 
-.lb2 {}
+#sw3:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
+  margin-top: -6rem;
+}
 
-.lb3 {}
+#sw3:checked~.slider__navigation .slider__buttons .lb3 {
+  background-color: #ffffff;
+}
 
-.lb4 {}
+#sw4:checked~.slider__items .sw1 {
+  margin-left: -60%;
+}
 
-.lb5 {}
+#sw4:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
+  margin-top: -9rem;
+}
+
+#sw4:checked~.slider__navigation .slider__buttons .lb4 {
+  background-color: #ffffff;
+}
+
+#sw5:checked~.slider__items .sw1 {
+  margin-left: -80%;
+}
+
+#sw5:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
+  margin-top: -12rem;
+}
+
+#sw5:checked~.slider__navigation .slider__buttons .lb5 {
+  background-color: #ffffff;
+}
