@@ -41,3 +41,50 @@ body {
   padding: 2rem;
 }
 
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  display: flex;
+  column-gap: 2vw;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.github__image {
+  width: 5vw;
+  transition: all .5s ease;
+}
+
+.github__name {
+  transition: all .3s ease;
+}
+
+.github:hover .github__name {
+  color: #d49202;
+  transition: all .3s ease;
+}
+
+.github:hover .github__image {
+  transform: rotate(360deg);
+  transition: all .5s ease;
+}
+
+.app-created-date > span {
+  color: #d49202;
+  font-weight: bold;
+}
+
+.rsschool:hover .rsschool__image {
+  transform: scale(1.2);
+  transition: all .5s ease;
+}
+
+.rsschool__image {
+  width: 10vw;
+  transition: all .5s ease;
+}
