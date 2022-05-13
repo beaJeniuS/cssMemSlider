@@ -180,6 +180,8 @@ body {
   height: 3rem;
   transition: .7s;
   padding: 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #sw1:checked~.slider__items .sw1 {
@@ -247,3 +249,27 @@ body {
   border-radius: 15%;
 }
 
+@media (max-width: 768px) {
+  .slider__navigation {
+    flex-direction: column;   
+    align-items: center;
+  }
+
+  .slider__notification {
+    order: 2;
+  }
+
+  .slider__buttons {
+    order: 1;
+  }
+
+  .slider__notification-item {
+    justify-content: center;
+  }
+
+  .slider__notification-item p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
