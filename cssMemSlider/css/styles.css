@@ -276,6 +276,53 @@ body {
   }  
 }
 
+@media (min-width: 320px) and (orientation: landscape) { /*and (max-width: 567px)*/
+  .main-header {
+    font-size: 1rem;
+  }
+
+  .header__row {
+    padding: .2rem 0;
+  }
+
+  .footer__row {
+    padding: .2rem;
+  }
+  .slider__items {
+    max-height: 65vh;
+  }
+
+  .slider__navigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .github__image {
+    width: 3vw;
+  }
+
+  .rsschool__image {
+    width: 7vw;
+  }
+
+  .footer {
+      font-size: .8rem;
+  }  
+
+  .slider__notification {
+    order: 1;
+  }
+
+  .slider__buttons {
+    order: 2;
+  }
+
+  .slider__notification-item p {
+    text-align: left;
+    font-size: .8rem;
+  }
+}
+
 @media (min-width: 768px) {
   .footer {
       font-size: 2rem;
@@ -308,6 +355,20 @@ body {
   }
 }
 
+@media (min-width: 568px) and (orientation: landscape) { /*and (max-width: 767px)*/
+  .footer {
+    font-size: 1rem;
+  }
+
+  .slider__items {
+    max-height: 70vh;
+  }
+
+  .slider__notification-item p {
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .slider__items {
     max-height: 70vh;
@@ -326,3 +387,26 @@ body {
     column-gap: 5vw;
   }
 }
+
+@media (min-width: 1024px) and (orientation: landscape) {
+.main-header {
+    font-size: 1.5rem;
+  }
+
+  .header__row {
+    padding: .5rem 0;
+  }
+
+  .footer__row {
+    padding: .5rem;
+  }  
+  
+  .slider__items {
+    max-height: 80vh;
+  }
+
+  .slider__notification-item p {
+    font-size: 1.2rem;
+  }
+}
+
