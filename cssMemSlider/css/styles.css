@@ -7,12 +7,13 @@
 }
 
 .container {
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
 }
 
 body {
   color: #ffffff;
+  font-family: 'Comfortaa', cursive;
   font-size: 2rem;
   background-color: #001b33
 }
@@ -20,7 +21,7 @@ body {
 .header__row {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: .5rem 0;
 }
 
 .content {
@@ -38,13 +39,13 @@ body {
 }
 
 .footer {
-  font-size: 3vw;
+  font-size: 1rem;
 }
 
 .footer__row {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: .5rem;
 }
 
 .footer__item {
@@ -62,7 +63,7 @@ body {
 }
 
 .github__image {
-  width: 5vw;
+  width: 10vw;
   transition: all .5s ease;
 }
 
@@ -91,25 +92,25 @@ body {
 }
 
 .rsschool__image {
-  width: 10vw;
+  width: 25vw;
   transition: all .5s ease;
 }
 
 .slider {
   overflow: hidden;
   width: 100%;
-  max-height: 80vh;
 }
 
 .slider__items {
   width: 500%;
-  height: 70vh;
   display: flex;
 }
 
 .slider__item {
   width: 20%;
   transition: .7s;
+  border-radius: .5rem;  
+  overflow: hidden;
 }
 
 .slider__item img {
@@ -124,48 +125,58 @@ body {
 
 .slider__navigation {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 0;
-  column-gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
 }
 
 .slider__buttons {
-  width: 12rem;
+  width: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1vh;
-  padding: 1vh 0;
 }
 
-.slider__buttons-item {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 0.2vh solid #ffffff;
-  background-color: #d49202;
-  border-radius: 50%;
+.button {
   transition: all .3s ease;
   cursor: pointer;
 }
 
-.slider__buttons-item:hover {
-  background-color: #ffaf04;
-  border-radius: 15%;
-  transition: all .3s ease;  
+.button__area {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
 }
 
-.slider__buttons-item:active {
+.button__body {
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid #ffffff;
+  background-color: #d49202;
+  border-radius: 50%;  
+  transition: all .5s ease;  
+}
+
+.button:hover .button__area .button__body{
+  background-color: #ffffff;
+  transition: all .5s ease;  
+}
+
+.button:active {
   transition: all .2s ease;
-  transform: rotate(360deg) scale(1.5);
+  cursor: grabbing;
+  transform: rotateY(180deg);
+  transition: all .1s ease; 
 }
 
 .slider__notification {
   display: flex;
   flex-direction: column;
   height: 3rem;
-  overflow-y: hidden;
+  overflow: hidden;
   justify-content: flex-start;  
   flex: 1 1 auto;
+  order: 2;
 }
 
 .slider__notification-items {
@@ -180,6 +191,14 @@ body {
   padding: 0.5rem 0;
   display: flex;
   justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.slider__notification-item p {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
 }
 
 #sw1:checked~.slider__items .sw1 {
@@ -190,9 +209,8 @@ body {
   margin-top: 0;
 }
 
-#sw1:checked~.slider__navigation .slider__buttons .lb1 {
+#sw1:checked~.slider__navigation .slider__buttons .lb1 .button__area .button__body  {
   background-color: #ffffff;
-  border-radius: 15%;
 }
 
 #sw2:checked~.slider__items .sw1 {
@@ -203,9 +221,8 @@ body {
   margin-top: -3rem;
 }
 
-#sw2:checked~.slider__navigation .slider__buttons .lb2 {
+#sw2:checked~.slider__navigation .slider__buttons .lb2 .button__area .button__body {
   background-color: #ffffff;
-  border-radius: 15%;
 }
 
 #sw3:checked~.slider__items .sw1 {
@@ -216,9 +233,8 @@ body {
   margin-top: -6rem;
 }
 
-#sw3:checked~.slider__navigation .slider__buttons .lb3 {
+#sw3:checked~.slider__navigation .slider__buttons .lb3 .button__area .button__body {
   background-color: #ffffff;
-  border-radius: 15%;
 }
 
 #sw4:checked~.slider__items .sw1 {
@@ -229,9 +245,8 @@ body {
   margin-top: -9rem;
 }
 
-#sw4:checked~.slider__navigation .slider__buttons .lb4 {
+#sw4:checked~.slider__navigation .slider__buttons .lb4 .button__area .button__body {
   background-color: #ffffff;
-  border-radius: 15%;
 }
 
 #sw5:checked~.slider__items .sw1 {
@@ -242,32 +257,72 @@ body {
   margin-top: -12rem;
 }
 
-#sw5:checked~.slider__navigation .slider__buttons .lb5 {
+#sw5:checked~.slider__navigation .slider__buttons .lb5 .button__area .button__body {
   background-color: #ffffff;
-  border-radius: 15%;
 }
 
-@media (max-width: 768px) {
+
+@media (min-width: 568px) {
+  .footer {
+      font-size: 1.5rem;
+  }
+
+  .github__image {
+    width: 8vw;
+  }
+
+  .rsschool__image {
+    width: 20vw;
+  }  
+}
+
+@media (min-width: 768px) {
+  .footer {
+      font-size: 2rem;
+  }
+  
+  .github__image {
+    width: 5vw;
+  }
+
+  .rsschool__image {
+    width: 15vw;
+  }  
+
   .slider__navigation {
-    flex-direction: column;   
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .slider__notification {
-    order: 2;
-  }
-
-  .slider__buttons {
     order: 1;
   }
 
-  .slider__notification-item {
-    justify-content: center;
+  .slider__buttons {
+    order: 2;
   }
 
-  .slider__notification-item p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .slider__notification-item p {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider__items {
+    max-height: 70vh;
+  }
+
+  .github__image {
+    width: 3vw;
+  }
+
+  .rsschool__image {
+    width: 10vw;
+  }  
+
+  .footer__row {
+    justify-content: center;
+    column-gap: 5vw;
   }
 }
