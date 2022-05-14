@@ -154,7 +154,7 @@ body {
   border: 0.1rem solid #ffffff;
   background-color: #d49202;
   border-radius: 50%;  
-  transition: all .5s ease;  
+  transition: all .3s ease;  
 }
 
 .button:hover .button__area .button__body{
@@ -183,6 +183,7 @@ body {
   height: 15rem;
   display: flex;
   flex-direction: column;
+  transition: all 1s ease;
 }
 
 .slider__notification-item {
@@ -203,64 +204,78 @@ body {
 
 #sw1:checked~.slider__items .sw1 {
   margin-left: 0;
+  transition: all 1s ease;
 }
 
 #sw1:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
   margin-top: 0;
+  transition: all 1s ease;
 }
 
 #sw1:checked~.slider__navigation .slider__buttons .lb1 .button__area .button__body  {
   background-color: #ffffff;
+  transition: all .3s ease;
 }
 
 #sw2:checked~.slider__items .sw1 {
   margin-left: -20%;
+  transition: all 1s ease;
 }
 
 #sw2:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
   margin-top: -3rem;
+  transition: all 1s ease;
 }
 
 #sw2:checked~.slider__navigation .slider__buttons .lb2 .button__area .button__body {
   background-color: #ffffff;
+  transition: all .3s ease;
 }
 
 #sw3:checked~.slider__items .sw1 {
   margin-left: -40%;
+  transition: all 1s ease;
 }
 
 #sw3:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
   margin-top: -6rem;
+  transition: all 1s ease;
 }
 
 #sw3:checked~.slider__navigation .slider__buttons .lb3 .button__area .button__body {
   background-color: #ffffff;
+  transition: all .3s ease;
 }
 
 #sw4:checked~.slider__items .sw1 {
   margin-left: -60%;
+  transition: all 1s ease;
 }
 
 #sw4:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
   margin-top: -9rem;
+  transition: all 1s ease;
 }
 
 #sw4:checked~.slider__navigation .slider__buttons .lb4 .button__area .button__body {
   background-color: #ffffff;
+  transition: all .3s ease;
 }
 
 #sw5:checked~.slider__items .sw1 {
   margin-left: -80%;
+  transition: all 1s ease;
 }
 
 #sw5:checked~.slider__navigation .slider__notification .slider__notification-items .nti1 {
   margin-top: -12rem;
+  transition: all 1s ease;
 }
 
 #sw5:checked~.slider__navigation .slider__buttons .lb5 .button__area .button__body {
   background-color: #ffffff;
+  transition: all .3s ease;
 }
-
 
 @media (min-width: 568px) {
   .footer {
@@ -276,7 +291,7 @@ body {
   }  
 }
 
-@media (min-width: 320px) and (orientation: landscape) { /*and (max-width: 567px)*/
+@media (min-width: 320px) and (orientation: landscape) {
   .main-header {
     font-size: 1rem;
   }
@@ -323,7 +338,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .footer {
       font-size: 2rem;
   }
@@ -355,7 +370,7 @@ body {
   }
 }
 
-@media (min-width: 568px) and (orientation: landscape) { /*and (max-width: 767px)*/
+@media (min-width: 568px) and (orientation: landscape) {
   .footer {
     font-size: 1rem;
   }
