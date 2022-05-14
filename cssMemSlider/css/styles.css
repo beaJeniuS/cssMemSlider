@@ -370,16 +370,20 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .header__row {
+    padding: 1rem 0;
+  }
+
   .slider__items {
     max-height: 70vh;
   }
 
   .github__image {
-    width: 3vw;
+    width: 2vw;
   }
 
   .rsschool__image {
-    width: 10vw;
+    width: 8vw;
   }  
 
   .footer__row {
@@ -394,7 +398,7 @@ body {
   }
 
   .header__row {
-    padding: .5rem 0;
+    padding: 1rem 0;
   }
 
   .footer__row {
